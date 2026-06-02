@@ -1,0 +1,275 @@
+.calendar-section {
+  padding: 60px 0;
+  background: #f8f9fa;
+}
+
+.calendar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.calendar-container h2 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.calendar-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Стили календаря */
+.calendar-wrapper {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.react-calendar {
+  border: none !important;
+  width: 100% !important;
+  font-family: inherit !important;
+}
+
+.react-calendar__navigation {
+  background: #003366;
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
+}
+
+.react-calendar__navigation button {
+  color: white !important;
+  font-size: 1.1rem;
+}
+
+.react-calendar__navigation button:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px;
+}
+
+.react-calendar__month-view__weekdays {
+  background: #f0f4f8;
+  padding: 10px 0;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  color: #003366;
+  font-weight: bold;
+}
+
+.react-calendar__tile {
+  padding: 15px 10px;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.react-calendar__tile:hover {
+  background: #e3f2fd;
+}
+
+.react-calendar__tile--active {
+  background: #003366 !important;
+  color: white !important;
+  border-radius: 8px;
+}
+
+.react-calendar__tile--now {
+  background: #e8f5e9;
+  border-radius: 8px;
+}
+
+/* Точки событий */
+.event-dots {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-maintenance { background: #ff9800; }
+.dot-launch { background: #4caf50; }
+.dot-training { background: #2196f3; }
+.dot-inspection { background: #9c27b0; }
+.dot-meeting { background: #f44336; }
+.dot-diagnostic { background: #00bcd4; }
+
+/* Панель событий */
+.events-panel {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.events-panel h3 {
+  color: #003366;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.no-events {
+  color: #999;
+  text-align: center;
+  padding: 20px;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.event-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 4px solid;
+}
+
+.event-card.event-maintenance { background: #fff3e0; border-color: #ff9800; }
+.event-card.event-launch { background: #e8f5e9; border-color: #4caf50; }
+.event-card.event-training { background: #e3f2fd; border-color: #2196f3; }
+.event-card.event-inspection { background: #f3e5f5; border-color: #9c27b0; }
+.event-card.event-meeting { background: #fce4ec; border-color: #f44336; }
+.event-card.event-diagnostic { background: #e0f7fa; border-color: #00bcd4; }
+
+.event-icon {
+  font-size: 1.5rem;
+  min-width: 40px;
+  text-align: center;
+}
+
+.event-info h4 {
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.event-type {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Ближайшие события */
+.upcoming-events {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.event-card-small {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.event-date {
+  background: #003366;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.event-title-small {
+  color: #333;
+}
+
+/* Темная тема */
+body.dark-theme .calendar-section {
+  background: #1a1a2e;
+}
+
+body.dark-theme .calendar-container h2 {
+  color: #4da6ff;
+}
+
+body.dark-theme .calendar-wrapper,
+body.dark-theme .events-panel {
+  background: #16213e;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .react-calendar {
+  background: #16213e;
+  color: #e0e0e0;
+}
+
+body.dark-theme .react-calendar__navigation {
+  background: #1a1a2e;
+}
+
+body.dark-theme .react-calendar__month-view__weekdays {
+  background: #1a1a2e;
+}
+
+body.dark-theme .react-calendar__month-view__weekdays__weekday {
+  color: #4da6ff;
+}
+
+body.dark-theme .react-calendar__tile {
+  color: #e0e0e0;
+}
+
+body.dark-theme .react-calendar__tile:hover {
+  background: rgba(77, 166, 255, 0.1);
+}
+
+body.dark-theme .react-calendar__tile--now {
+  background: rgba(76, 175, 80, 0.2);
+}
+
+body.dark-theme .react-calendar__tile--active {
+  background: #4da6ff !important;
+}
+
+body.dark-theme .events-panel h3 {
+  color: #4da6ff;
+}
+
+body.dark-theme .event-info h4 {
+  color: #e0e0e0;
+}
+
+body.dark-theme .event-title-small {
+  color: #e0e0e0;
+}
+
+body.dark-theme .upcoming-events {
+  border-top-color: #2a2a4a;
+}
+
+body.dark-theme .no-events {
+  color: #666;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .calendar-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .react-calendar__tile {
+    padding: 10px 5px;
+  }
+}

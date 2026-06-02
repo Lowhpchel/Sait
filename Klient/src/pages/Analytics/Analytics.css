@@ -1,0 +1,111 @@
+.analytics-page {
+  padding: 100px 20px 60px;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.analytics-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.analytics-container h1 {
+  color: #003366;
+  margin-bottom: 30px;
+}
+
+.analytics-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 30px;
+}
+
+.chart-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.chart-card h3 {
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+/* Экспорт */
+.export-section {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.export-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.export-btn {
+  padding: 12px 25px;
+  background: #003366;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.export-preview {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #4caf50;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-top: 15px;
+}
+
+/* Темная тема */
+body.dark-theme .analytics-page {
+  background: #1a1a2e;
+}
+
+body.dark-theme .chart-card,
+body.dark-theme .export-section {
+  background: #16213e;
+}
+
+body.dark-theme .chart-card h3 {
+  color: #4da6ff;
+}
+
+body.dark-theme .export-preview {
+  background: #1a1a2e;
+}
+
+body.dark-theme .recharts-text {
+  fill: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}

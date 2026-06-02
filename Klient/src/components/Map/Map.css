@@ -1,0 +1,165 @@
+.map-section {
+  padding: 60px 0;
+  background: #f8f9fa;
+}
+
+.map-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.map-container h2 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.map-wrapper {
+  height: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  border: 3px solid #003366;
+  position: relative;
+}
+
+.leaflet-map {
+  height: 100%;
+  width: 100%;
+}
+
+/* Скрываем стандартный водяной знак */
+.leaflet-control-attribution {
+  display: none !important;
+}
+
+/* Добавляем свой водяной знак */
+.map-wrapper::after {
+  content: '🇷🇺 Карта объектов Газпром Трансгаз Самара';
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #003366;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+.map-popup h3 {
+  color: #003366;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.map-popup p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Легенда */
+.map-legend {
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-legend h3 {
+  color: #003366;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #555;
+  background: #f5f5f5;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+.legend-item span {
+  font-size: 1.2rem;
+}
+
+/* Темная тема */
+body.dark-theme .map-section {
+  background: #1a1a2e;
+}
+
+body.dark-theme .map-container h2 {
+  color: #4da6ff;
+}
+
+body.dark-theme .map-wrapper {
+  border-color: #2a2a4a;
+}
+
+body.dark-theme .map-wrapper::after {
+  background: rgba(22, 33, 62, 0.95);
+  color: #4da6ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .map-legend {
+  background: #16213e;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .map-legend h3 {
+  color: #4da6ff;
+}
+
+body.dark-theme .legend-item {
+  background: #1a1a2e;
+  color: #b0b0b0;
+}
+
+body.dark-theme .map-popup h3 {
+  color: #003366;
+}
+
+body.dark-theme .map-popup p {
+  color: #666;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .map-wrapper {
+    height: 350px;
+  }
+  
+  .map-wrapper::after {
+    font-size: 0.7rem;
+    padding: 6px 10px;
+    bottom: 5px;
+    right: 5px;
+  }
+  
+  .legend-items {
+    gap: 10px;
+  }
+  
+  .legend-item {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
