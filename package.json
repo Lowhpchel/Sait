@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node Server/server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon Server/server.js"
   },
   "keywords": [
     "gazprom",
