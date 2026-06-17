@@ -64,8 +64,6 @@ function Login() {
         </form>
         
         <div className="login-info">
-          <p>Тестовые данные:</p>
-          <p>Логин: admin | Пароль: admin123</p>
           <Link to="/" className="back-link">← На главную</Link>
         </div>
       </div>
