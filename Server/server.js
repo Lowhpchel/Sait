@@ -13,7 +13,7 @@ import errorHandler from './middleware/errorHandler.js';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors({
   origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
