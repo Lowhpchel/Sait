@@ -1,14 +1,14 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { testConnection } from './config/database.js';
-import serviceRoutes from './routes/serviceRoutes.js';
-import requestRoutes from './routes/requestRoutes.js';
-import authRoutes from './routes/authRoutes.js';
-import adminRoutes from './routes/adminRoutes.js';
-import calendarRoutes from './routes/calendarRoutes.js';
-import orderRoutes from './routes/orderRoutes.js';  
-import errorHandler from './middleware/errorHandler.js';
+import { testConnection } from './Server/config/database.js';
+import serviceRoutes from './Server/routes/serviceRoutes.js';
+import requestRoutes from './Server/routes/requestRoutes.js';
+import authRoutes from './Server/routes/authRoutes.js';
+import adminRoutes from './Server/routes/adminRoutes.js';
+import calendarRoutes from './Server/routes/calendarRoutes.js';
+import orderRoutes from './Server/routes/orderRoutes.js';  
+import errorHandler from './Server/middleware/errorHandler.js';
 
 dotenv.config();
 
