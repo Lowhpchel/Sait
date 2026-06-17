@@ -1,19 +1,19 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { testConnection } from './Server/config/database.js';
-import serviceRoutes from './Server/routes/serviceRoutes.js';
-import requestRoutes from './Server/routes/requestRoutes.js';
-import authRoutes from './Server/routes/authRoutes.js';
-import adminRoutes from './Server/routes/adminRoutes.js';
-import calendarRoutes from './Server/routes/calendarRoutes.js';
-import orderRoutes from './Server/routes/orderRoutes.js';  
-import errorHandler from './Server/middleware/errorHandler.js';
+import { testConnection } from './config/database.js';
+import serviceRoutes from './routes/serviceRoutes.js';
+import requestRoutes from './routes/requestRoutes.js';
+import authRoutes from './routes/authRoutes.js';
+import adminRoutes from './routes/adminRoutes.js';
+import calendarRoutes from './routes/calendarRoutes.js';
+import orderRoutes from './routes/orderRoutes.js';  
+import errorHandler from './middleware/errorHandler.js';
 
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors({
   origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
